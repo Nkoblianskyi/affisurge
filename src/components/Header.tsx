@@ -6,6 +6,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const services = [
+    { label: "All Services", href: "/services" },
     { label: "SEO Services", href: "/services/seo" },
     { label: "PPC Services", href: "/services/ppc" },
     { label: "Affiliate Services", href: "/services/affiliate" },
@@ -85,6 +86,9 @@ export default function Header() {
 
                     <Link href="/blog" className="text-gray-800 hover:text-khaki transition">
                         Blog
+                    </Link>
+                    <Link href="/about-us" className="text-gray-800 hover:text-khaki transition">
+                        About Us
                     </Link>
                     <Link href="/contact-us" className="text-gray-800 hover:text-khaki transition">
                         Contact us
