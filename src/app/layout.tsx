@@ -7,6 +7,7 @@ import { Epilogue } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Topbar from "@/components/Topbar";
+import CookieConsent from "@/components/CookieConsent";
 
 const epilogue = Epilogue({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             {children}
             <Footer />
+            <CookieConsent/>
           </main>
         </MantineProvider>
       </body>

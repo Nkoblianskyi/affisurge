@@ -42,7 +42,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
                 {/* ЛОГОТИП */}
                 <Link href="/" className="flex items-center gap-2 text-xl font-bold text-khaki">
-                    <Image src="/logo.svg" alt="logo" width={32} height={32} />
+                    <Image src="/logo.png" alt="logo" width={32} height={32} />
                     <span className="text-khaki tracking-wide">AFFISURGE</span>
                 </Link>
 

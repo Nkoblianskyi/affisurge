@@ -27,6 +27,12 @@ export default function Footer() {
                         <a href="#" className="hover:opacity-75">Twitter</a>
                     </div>
                 </div>
+                <div>
+                    <div className="flex gap-4 font-medium mb-2">
+                        <Link href="/privacy-policy" className="hover:opacity-75">Privacy Policy</Link>
+                        <Link href="/cookies" className="hover:opacity-75">Cookies</Link>
+                    </div>
+                </div>
             </div>
             <div className="mt-8 text-center text-xs text-lightBg/60">© {new Date().getFullYear()} AffiSurge. All rights reserved.</div>
         </footer>
