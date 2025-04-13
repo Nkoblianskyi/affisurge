@@ -39,7 +39,7 @@ const seoServices = [
         title: "Off-page optimization",
         description:
             "We focus on building backlinks and creating an off-page strategy that helps to boost your website’s authority and increase its online presence.",
-        imgSrc: "/images/seo-off-page.png",
+        imgSrc: "/images/seo-off-p.png",
     },
     {
         title: "Reporting",

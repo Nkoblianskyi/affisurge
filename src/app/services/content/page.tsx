@@ -56,15 +56,7 @@ export default function ContentServicesPage() {
                 </p>
 
                 {/* Загальна ілюстрація */}
-                <div className="flex justify-center mb-16">
-                    <Image
-                        src="/images/seo-content.png"
-                        alt="Content Services"
-                        width={700}
-                        height={400}
-                        className="object-cover rounded-lg"
-                    />
-                </div>
+
 
                 {/* Секція з Content послугами */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-24">
@@ -80,6 +72,16 @@ export default function ContentServicesPage() {
                             <p className="text-sm text-graphite/80">{service.description}</p>
                         </div>
                     ))}
+                </div>
+
+                <div className="flex justify-center mb-16">
+                    <Image
+                        src="/images/seo-content.png"
+                        alt="Content Services"
+                        width={700}
+                        height={400}
+                        className="object-cover rounded-lg"
+                    />
                 </div>
 
                 {/* Заклик до дії */}

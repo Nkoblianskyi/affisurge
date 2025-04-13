@@ -70,13 +70,13 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Section Image */}
-                <div className="relative w-full h-80 md:h-96 mb-16">
+                <div className="relative w-full h-80 md:h-96 mb-16 mt-16">
                     <Image
-                        src="/images/services-image.jpg" // Add the correct image path
+                        src="/images/services-image.png"
                         alt="Our Services"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-lg"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 768px"
+                        className="object-contain rounded-lg"
                     />
                 </div>
 

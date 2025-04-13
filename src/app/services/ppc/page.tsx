@@ -75,7 +75,15 @@ export default function PPCPage() {
                         </div>
                     ))}
                 </div>
-
+                <div className="flex justify-center mb-16">
+                    <Image
+                        src="/images/ppc-image.png" // Ваша загальна картинка
+                        alt="PPC Services"
+                        width={700}
+                        height={400}
+                        className="object-cover rounded-lg"
+                    />
+                </div>
                 {/* Заклик до дії */}
                 <div className="mt-16">
                     <Link
