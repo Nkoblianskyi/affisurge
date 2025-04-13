@@ -2,7 +2,8 @@
 
 import { useParams } from "next/navigation";
 import Image from "next/image";
-import { blogPosts } from "../page";
+import { blogPosts } from "../../../../public/mocks/blog-post";
+
 
 export default function BlogPost() {
     const params = useParams();
@@ -10,7 +11,6 @@ export default function BlogPost() {
 
     if (!slug) return <p>Loading...</p>;
 
-    // Знаходимо пост за slug (порівнюємо з кінцем лінка)
     const post = blogPosts.find((post) => post.link.endsWith(slug as string));
 
     if (!post) return <p>Post not found.</p>;
