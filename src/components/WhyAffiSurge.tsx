@@ -3,6 +3,7 @@
 import { Button } from "@mantine/core";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhyAffiSurge() {
     return (
@@ -29,12 +30,14 @@ export default function WhyAffiSurge() {
                     <p className="text-base text-graphite/80 leading-relaxed mb-6">
                         At AffiSurge, we go beyond marketing — we deliver performance. From driving traffic to generating leads, our tailored campaigns produce measurable impact.
                     </p>
-                    <Button
-                        size="md"
-                        className="bg-orangeAccent hover:bg-orangeAccent/90 text-white px-5 py-3 rounded-md shadow-md flex items-center gap-2"
-                    >
-                        START SCALING NOW <ArrowRight size={18} />
-                    </Button>
+                    <Link href="/contact-us">
+                        <Button
+                            size="md"
+                            className="bg-orangeAccent hover:bg-orangeAccent/90 text-white px-5 py-3 rounded-md shadow-md flex items-center gap-2"
+                        >
+                            START SCALING NOW <ArrowRight size={18} />
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>
