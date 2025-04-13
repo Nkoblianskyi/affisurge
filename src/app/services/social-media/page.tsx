@@ -55,8 +55,6 @@ export default function SocialMediaServicesPage() {
                     Expand your brands reach and increase leads with our specialized social media services.
                 </p>
 
-                {/* Загальна ілюстрація */}
-
                 {/* Секція з Social Media послугами */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-24">
                     {socialMediaServices.map((service, index) => (
@@ -72,13 +70,13 @@ export default function SocialMediaServicesPage() {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-16 mt-16">
                     <Image
-                        src="/images/social-media-image.png"
+                        src="/images/social-media-marketing.png"
                         alt="Social Media Services"
-                        width={700}
+                        width={600}
                         height={400}
-                        className="object-cover rounded-lg"
+                        className="object-contain rounded-lg"
                     />
                 </div>
 

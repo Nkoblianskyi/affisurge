@@ -80,12 +80,12 @@ export default function AffiliateServicesPage() {
                     ))}
                 </div>
 
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-16 mt-10">
                     <Image
                         src="/images/affiliate-image.png"
                         alt="Affiliate Services"
-                        width={700}
-                        height={400}
+                        width={600}
+                        height={300}
                         className="object-cover rounded-lg"
                     />
                 </div>

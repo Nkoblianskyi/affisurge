@@ -49,17 +49,6 @@ export default function PPCPage() {
                     Unlock the potential of your business with our targeted PPC services. From strategy to performance reporting, we help you achieve exceptional ROI.
                 </p>
 
-                {/* Загальна ілюстрація */}
-                <div className="flex justify-center mb-16">
-                    <Image
-                        src="/images/ppc-image.png" // Ваша загальна картинка
-                        alt="PPC Services"
-                        width={700}
-                        height={400}
-                        className="object-cover rounded-lg"
-                    />
-                </div>
-
                 {/* Секція з PPC послугами */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-24">
                     {ppcServices.map((service, index) => (
@@ -75,16 +64,16 @@ export default function PPCPage() {
                         </div>
                     ))}
                 </div>
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-16 mt-10">
                     <Image
-                        src="/images/ppc-image.png" // Ваша загальна картинка
+                        src="/images/ppc-image.png"
                         alt="PPC Services"
                         width={700}
                         height={400}
                         className="object-cover rounded-lg"
                     />
                 </div>
-                {/* Заклик до дії */}
+
                 <div className="mt-16">
                     <Link
                         href="/contact-us"

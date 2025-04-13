@@ -74,7 +74,7 @@ export default function ContentServicesPage() {
                     ))}
                 </div>
 
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-16 mt-10">
                     <Image
                         src="/images/seo-content.png"
                         alt="Content Services"
