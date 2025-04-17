@@ -1,17 +1,24 @@
-"use client";
+// app/blog/[slug]/page.tsx
 
-import { useParams } from "next/navigation";
 import Image from "next/image";
-import { blogPosts } from "../../../../public/mocks/blog-post";
+import { getBlogPosts } from "@/lib/getBlogPosts";
+type Props = {
+    params: {
+        slug: string;
+    };
+};
 
+export async function generateStaticParams() {
+    const posts = await getBlogPosts();
 
-export default function BlogPost() {
-    const params = useParams();
-    const slug = params?.slug;
+    return posts.map((post) => ({
+        slug: post.link.split("/").pop(),
+    }));
+}
 
-    if (!slug) return <p>Loading...</p>;
-
-    const post = blogPosts.find((post) => post.link.endsWith(slug as string));
+export default async function BlogPostPage({ params }: Props) {
+    const posts = await getBlogPosts();
+    const post = posts.find((p) => p.link.endsWith(params.slug));
 
     if (!post) return <p>Post not found.</p>;
 
