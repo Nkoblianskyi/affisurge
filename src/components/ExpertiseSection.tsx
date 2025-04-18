@@ -71,7 +71,7 @@ export default function ExpertiseSection() {
                     Our Expertise: Marketing Solutions That Drive Results
                 </h2>
                 <p className="text-lg md:text-xl text-graphite/80 mb-16">
-                    We specialize in marketing solutions that deliver real results. Our expertise spans key channels such as SEO, PPC, and social media, helping you achieve the best outcomes.
+                    We specialize in marketing solutions that deliver real results.. Our expertise spans key channels such as SEO, PPC, and social media, helping you achieve the best outcomes.
                 </p>
 
                 {/* Expertise content with chaotic positioning */}
