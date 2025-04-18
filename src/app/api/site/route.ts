@@ -33,9 +33,9 @@ export async function GET(req: NextRequest) {
     },
     auth: {
       clientId: 3024,
-      clientCompany: 'wYAKkDCo7dqqcZyeDnUN',
+      clientCompany: 'RBIv0ioaqExEbehjw2hO',
       clientSecret:
-        'MzAyNHdZQUtrRENvN2RxcWNaeWVEblVOY2U2NmY2ZTZmOWRlZjUxMGFjNDBiYTJlNjVjMmFjZGEwMTQyZmZhZQ==',
+        'MzAyNFJCSXYwaW9hcUV4RWJlaGp3MmhPY2U2NmY2ZTZmOWRlZjUxMGFjNDBiYTJlNjVjMmFjZGEwMTQyZmZhZQ==',
     },
   });
 
