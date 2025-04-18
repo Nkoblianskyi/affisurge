@@ -1,26 +1,18 @@
-// app/blog/[slug]/page.tsx
+'use client';
 
-import Image from "next/image";
-import { getBlogPosts } from "@/lib/getBlogPosts";
-type Props = {
-    params: {
-        slug: string;
-    };
-};
+import { use } from 'react';
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { getBlogPosts } from '@/lib/getBlogPosts';
 
-export async function generateStaticParams() {
-    const posts = await getBlogPosts();
+// Сторінка посту, що використовує use() для params
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params);
+    const posts = use(getBlogPosts()); // ⛔️ Але getBlogPosts async → тільки SSR. Альтернатива — передавати дані через props або cache
 
-    return posts.map((post) => ({
-        slug: post.link.split("/").pop(),
-    }));
-}
+    const post = posts.find((p) => p.link.endsWith(slug));
 
-export default async function BlogPostPage({ params }: Props) {
-    const posts = await getBlogPosts();
-    const post = posts.find((p) => p.link.endsWith(params.slug));
-
-    if (!post) return <p>Post not found.</p>;
+    if (!post) return notFound();
 
     return (
         <section className="bg-lightBg py-20 px-6 md:py-32 md:px-24">
@@ -29,22 +21,27 @@ export default async function BlogPostPage({ params }: Props) {
                     {post.title}
                 </h2>
                 <p className="text-lg md:text-xl text-graphite/80 mb-8">{post.date}</p>
-
                 <p className="text-base text-graphite/80 mb-8">{post.description}</p>
 
-                <div className="mb-8">
-                    <p className="text-base text-graphite/80">{post.fullDescription}</p>
-                </div>
+                {post.fullDescription && (
+                    <div className="mb-8 text-base text-graphite/80">
+                        {post.fullDescription.split('\n').map((para, idx) => (
+                            <p key={idx} className="mb-4">{para}</p>
+                        ))}
+                    </div>
+                )}
 
-                <div>
-                    <Image
-                        src={post.imgSrc}
-                        alt={post.title}
-                        width={800}
-                        height={450}
-                        className="rounded-lg object-cover w-full h-auto"
-                    />
-                </div>
+                {post.imgSrc && (
+                    <div>
+                        <Image
+                            src={post.imgSrc}
+                            alt={post.title}
+                            width={800}
+                            height={450}
+                            className="rounded-lg object-cover w-full h-auto"
+                        />
+                    </div>
+                )}
             </div>
         </section>
     );
